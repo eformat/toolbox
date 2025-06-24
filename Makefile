@@ -15,7 +15,7 @@ podman-tag-release:
 	@podman tag $(REPOSITORY):$(VERSION) $(REPOSITORY):latest
 
 # Push for Release
-podman-push-release:  podman-tag-release
+podman-push-release: podman-tag-release
 	@podman push $(REPOSITORY):$(VERSION)
 	@podman push $(REPOSITORY):latest
 
@@ -27,3 +27,5 @@ podman-build:
 podman-push: podman-build
 	podman push ${IMG}
 	podman push ${IMG}-x86_64
+
+podman-push-all: podman-build podman-push-release

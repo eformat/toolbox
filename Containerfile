@@ -61,5 +61,5 @@ RUN npm i -g docsify-cli && \
     echo "📚📚📚📚📚"
 
 # python global deps
-RUN pip3 install awscli==1.40.41 boto3==1.38.42 botocore==1.38.42 && \
+RUN pip3 install awscli==1.37.15 boto3==1.36.15 botocore==1.36.15 && \
     echo "🦀🦀🦀🦀🦀"
