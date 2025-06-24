@@ -52,5 +52,5 @@ RUN npm i -g docsify-cli && \
     echo "📚📚📚📚📚"
 
 # python global deps
-RUN pip3 install aws boto3==1.36.15 && \
+RUN pip3 install awscli==1.40.41 boto3==1.38.42 botocore==1.38.42 && \
     echo "🦀🦀🦀🦀🦀"
