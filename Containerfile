@@ -8,7 +8,7 @@ ENV ARGOCD_VERSION=2.14.15 \
     VAULT_VERSION=1.19.5 \
     KUSTOMIZE_VERSION=5.6.0
 
-ENV PACKAGES="ansible gzip iputils bind-utils net-tools nodejs npm nodejs-nodemon python3-pip httpd-tools"
+ENV PACKAGES="ansible gzip iputils bind-utils net-tools nodejs npm nodejs-nodemon python3-pip httpd-tools gettext-envsubst"
 
 RUN dnf -y install \
     ${PACKAGES} && \
