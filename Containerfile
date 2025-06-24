@@ -5,7 +5,8 @@ ENV ARGOCD_VERSION=2.14.15 \
     HELM_VERSION=3.18.3 \
     OC_VERSION=4.19.1 \
     JQ_VERSION=1.8.0 \
-    VAULT_VERSION=1.19.5
+    VAULT_VERSION=1.19.5 \
+    KUSTOMIZE_VERSION=5.6.0
 
 ENV PACKAGES="ansible gzip iputils bind-utils net-tools nodejs npm nodejs-nodemon python3-pip httpd-tools"
 
@@ -45,6 +46,14 @@ RUN curl -skL -o /tmp/vault.zip https://releases.hashicorp.com/vault/${VAULT_VER
     mv -v /tmp/vault /usr/local/bin && \
     chmod -R 775 /usr/local/bin/vault && \
     rm -rf /tmp/vault.zip && \
+    echo "🔑🔑🔑🔑🔑"
+
+# Install kustomize
+RUN curl -skL -o /tmp/kustomize.tar.gz https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv${KUSTOMIZE_VERSION}/kustomize_v${KUSTOMIZE_VERSION}_linux_amd64.tar.gz && \
+    tar -C /tmp -xzf /tmp/kustomize.tar.gz && \
+    mv -v /tmp/kustomize /usr/local/bin && \
+    chmod -R 775 /usr/local/bin/kustomize && \
+    rm -rf /tmp/linux-amd64 && \
     echo "🐾🐾🐾🐾🐾"
 
 # docsify-cli
