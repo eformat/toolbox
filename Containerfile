@@ -38,6 +38,7 @@ RUN curl -skL -o /tmp/helm.tar.gz https://get.helm.sh/helm-v${HELM_VERSION}-linu
     mv -v /tmp/linux-amd64/helm /usr/local/bin && \
     chmod -R 775 /usr/local/bin/helm && \
     rm -rf /tmp/linux-amd64 && \
+    rm -rf /tmp/helm.tar.gz && \
     echo "⚓️⚓️⚓️⚓️⚓️"
 
 # vault
@@ -54,6 +55,7 @@ RUN curl -skL -o /tmp/kustomize.tar.gz https://github.com/kubernetes-sigs/kustom
     mv -v /tmp/kustomize /usr/local/bin && \
     chmod -R 775 /usr/local/bin/kustomize && \
     rm -rf /tmp/linux-amd64 && \
+    rm -rf /tmp/kustomize.tar.gz && \
     echo "🐾🐾🐾🐾🐾"
 
 # docsify-cli
