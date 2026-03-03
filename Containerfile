@@ -1,12 +1,12 @@
-FROM registry.fedoraproject.org/fedora-toolbox:41
+FROM registry.fedoraproject.org/fedora-toolbox:43
 
-ENV ARGOCD_VERSION=2.14.15 \
+ENV ARGOCD_VERSION=3.3.2 \
     YQ_VERSION=4.23.1 \
-    HELM_VERSION=3.18.3 \
-    OC_VERSION=4.19.1 \
-    JQ_VERSION=1.8.0 \
-    VAULT_VERSION=1.19.5 \
-    KUSTOMIZE_VERSION=5.6.0
+    HELM_VERSION=4.1.1 \
+    OC_VERSION=4.20.15 \
+    JQ_VERSION=1.8.1 \
+    VAULT_VERSION=1.21.3 \
+    KUSTOMIZE_VERSION=5.8.1
 
 ENV PACKAGES="ansible gzip iputils bind-utils net-tools nodejs npm nodejs-nodemon python3-pip httpd-tools gettext-envsubst"
 

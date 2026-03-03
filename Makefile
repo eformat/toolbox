@@ -3,7 +3,7 @@ REPOSITORY ?= $(REGISTRY)/eformat/toolbox
 REGISTRY ?= quay.io
 
 IMG := $(REPOSITORY):latest
-VERSION := 41
+VERSION := 43
 
 # podman Login
 podman-login:
